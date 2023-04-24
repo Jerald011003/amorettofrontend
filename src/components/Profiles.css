@@ -1,0 +1,42 @@
+.music-player {
+    width: 280px;
+    height: 50px;
+    background-color: #f3969a;
+    color: #f3969a;
+    border-radius: 220px;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  
+  /* .music-player::-webkit-media-controls {
+    display: none;
+    color: #f3969a;
+
+  } */
+  
+  .music-player::-webkit-media-controls-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .music-player::-webkit-media-controls-play-button {
+    background-color: #f3969a;
+    color: #beacac;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .music-player::-webkit-media-controls-volume-slider {
+    width: 15px;
+  }
+  
+  .music-player::-webkit-media-controls-time-remaining-display {
+    font-size: 12px;
+  }
+  

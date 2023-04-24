@@ -1,0 +1,61 @@
+.chatbox-container {
+  background-color: #292929;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.chatbox-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chatbox-header h2 {
+  font-size: 36px;
+  text-align: center;
+  margin: 0;
+}
+
+.chatbox-body form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.chatbox-body form input[type="text"] {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #fff;
+  margin-right: 10px;
+  padding: 10px;
+  width: 70%;
+}
+
+.chatbox-body form button {
+  background-color: #e50914;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chatbox-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chatbox-body ul li {
+  margin-bottom: 10px;
+}
+
+.chatbox-body ul li strong {
+  color: #e50914;
+}
+
