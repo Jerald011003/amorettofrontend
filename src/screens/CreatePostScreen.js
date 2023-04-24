@@ -87,7 +87,7 @@ const uploadFileHandler = async (e) => {
             }
         }
 
-        const { data } = await axios.post('/api/profiles/profileitem/upload/', formData, config)
+        const { data } = await axios.post('https://amoretto.pythonanywhere.com/api/profiles/profileitem/upload/', formData, config)
 
         setImage(data)
         setUploading(false)

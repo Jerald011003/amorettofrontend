@@ -183,7 +183,7 @@ function ProfileScreen({ match, history}) {
   
       const fetchUsers = async () => {
         try {
-          const response = await fetch('/api/users', {
+          const response = await fetch('https://amoretto.pythonanywhere.com/api/users', {
             headers: {
               Authorization: `Bearer ${userInfo.token}`,
             },

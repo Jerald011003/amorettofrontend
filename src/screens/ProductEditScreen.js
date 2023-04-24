@@ -95,7 +95,7 @@ function ProductEditScreen({ match, history }) {
                 }
             }
 
-            const { data } = await axios.post('/api/products/upload/', formData, config)
+            const { data } = await axios.post('https://amoretto.pythonanywhere.com/api/products/upload/', formData, config)
 
 
             setImage(data)
@@ -122,7 +122,7 @@ function ProductEditScreen({ match, history }) {
                 }
             }
 
-            const { data } = await axios.post('/api/products/upload/', formData, config)
+            const { data } = await axios.post('https://amoretto.pythonanywhere.com/api/products/upload/', formData, config)
 
 
             setDownload(data)

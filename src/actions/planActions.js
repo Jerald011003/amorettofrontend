@@ -36,7 +36,7 @@ export const listPlans = (keyword = '') => async (dispatch) => {
     try {
         dispatch({ type: PLAN_LIST_REQUEST })
 
-        const { data } = await axios.get(`/api/songs${keyword}`)
+        const { data } = await axios.get(`https://amoretto.pythonanywhere.com/api/songs${keyword}`)
 
         dispatch({
             type: PLAN_LIST_SUCCESS,
@@ -57,7 +57,7 @@ export const listTopPlans = () => async (dispatch) => {
     try {
         dispatch({ type: PLAN_TOP_REQUEST })
 
-        const { data } = await axios.get(`/api/plans/top/`)
+        const { data } = await axios.get(`https://amoretto.pythonanywhere.com/api/plans/top/`)
 
         dispatch({
             type: PLAN_TOP_SUCCESS,
@@ -79,7 +79,7 @@ export const listPlanDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: PLAN_DETAILS_REQUEST })
 
-        const { data } = await axios.get(`/api/plans/${id}`)
+        const { data } = await axios.get(`https://amoretto.pythonanywhere.com/api/plans/${id}`)
 
         dispatch({
             type: PLAN_DETAILS_SUCCESS,
@@ -115,7 +115,7 @@ export const deletePlan = (id) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.delete(
-            `/api/plans/delete/${id}/`,
+            `https://amoretto.pythonanywhere.com/api/plans/delete/${id}/`,
             config
         )
 
@@ -155,7 +155,7 @@ export const createPlan = () => async (dispatch, getState) => {
         }
 
         const { data } = await axios.post(
-            `/api/plans/create/`,
+            `https://amoretto.pythonanywhere.com/api/plans/create/`,
             {},
             config
         )
@@ -195,7 +195,7 @@ export const updatePlan = (plan) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.put(
-            `/api/plans/update/${plan._id}/`,
+            `https://amoretto.pythonanywhere.com/api/plans/update/${plan._id}/`,
             plan,
             config
         )
@@ -239,7 +239,7 @@ export const createPlanReview = (planId, review) => async (dispatch, getState) =
         }
 
         const { data } = await axios.post(
-            `/api/plans/${planId}/reviews/`,
+            `https://amoretto.pythonanywhere.com/api/plans/${planId}/reviews/`,
             review,
             config
         )

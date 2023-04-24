@@ -53,7 +53,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.post(
-            `/api/orders/add/`,
+            `https://amoretto.pythonanywhere.com/api/orders/add/`,
             order,
             config
         )
@@ -100,7 +100,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `/api/orders/${id}/`,
+            `https://amoretto.pythonanywhere.com/api/orders/${id}/`,
             config
         )
 
@@ -140,7 +140,7 @@ export const payOrder = (id, paymentResult) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.put(
-            `/api/orders/${id}/pay/`,
+            `https://amoretto.pythonanywhere.com/api/orders/${id}/pay/`,
             paymentResult,
             config
         )
@@ -180,7 +180,7 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.put(
-            `/api/orders/${order._id}/deliver/`,
+            `https://amoretto.pythonanywhere.com/api/orders/${order._id}/deliver/`,
             {},
             config
         )
@@ -221,7 +221,7 @@ export const listMyOrders = () => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `/api/orders/myorders/`,
+            `https://amoretto.pythonanywhere.com/api/orders/myorders/`,
             config
         )
 
@@ -260,7 +260,7 @@ export const listOrders = () => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `/api/orders/`,
+            `https://amoretto.pythonanywhere.com/api/orders/`,
             config
         )
 
@@ -294,14 +294,14 @@ export const deleteOrder = (id) => async (dispatch, getState) => {
         },
       };
   
-      await axios.delete(`/api/orders/${id}/delete/`, config);
+      await axios.delete(`https://amoretto.pythonanywhere.com/api/orders/${id}/delete/`, config);
   
       dispatch({ type: ORDER_DELETE_SUCCESS, payload: id });
   
       // Retrieve the list of orders and update the state
       dispatch({ type: ORDER_LIST_MY_REQUEST });
   
-      const { data } = await axios.get('/api/orders/myorders/', config);
+      const { data } = await axios.get('https://amoretto.pythonanywhere.com/api/orders/myorders/', config);
   
       dispatch({ type: ORDER_LIST_MY_SUCCESS, payload: data });
     } catch (error) {
