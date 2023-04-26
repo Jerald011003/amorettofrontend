@@ -8,7 +8,7 @@ import {
 } from '../constants/cartConstants'
 
 export const addToCart = (id, qty, maxQty) => async (dispatch, getState) => {
-  const { data } = await axios.get(`/api/products/${id}`)
+  const { data } = await axios.get(`https://amoretto.pythonanywhere.com/api/products/${id}`)
 
   dispatch({
     type: CART_REMOVE_ITEM,
