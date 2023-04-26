@@ -44,11 +44,11 @@ function ProfileListScreen({ history }) {
         <Message variant="danger">{profileError}</Message>
       ) : (
         
-        <div style={{ width: '500px', margin: '0 auto' }}>
+        <div style={{ width: 'auto', margin: '0 auto' }}  >
 
 <Carousel pause={true} interval={null}>
             {profiles.map((profile) => (
-              <Carousel.Item key={profile._id} >
+              <Carousel.Item key={profile._id} sm={1} md={3} lg={2} xl={1} >
       <Profile profile={profile} />
               </Carousel.Item>
             ))}

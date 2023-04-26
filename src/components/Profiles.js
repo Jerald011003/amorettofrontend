@@ -70,8 +70,18 @@ function Profiles({ profile,  match }) {
 
   return (
 <>
-      <Link to={`/date/${profile._id}`}  style={{ margin: '0 auto' }}>
-      <Card.Img src={profile.image} variant="top" style={{ width: '300px', height: '300px', objectFit: 'cover', borderRadius: '15%' }} />
+      <Link to={`/date/${profile._id}`} >
+      <Card.Img 
+  src={profile.image} 
+  variant="top" 
+  style={{ 
+    maxWidth: '400px', 
+    height: 'auto', 
+    objectFit: 'cover', 
+    borderRadius: '15%', 
+    margin: 'auto' 
+  }} 
+/>
       </Link>
 
 <div className='text-center'>
